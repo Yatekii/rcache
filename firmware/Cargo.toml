@@ -1,0 +1,16 @@
+[package]
+name = "rust_firmware"
+version = "0.1.0"
+authors = ["Samuel Bryner <samuelbryner@gmx.ch>"]
+edition = "2018"
+
+[dependencies]
+cortex-m = { version = "0.5.4", features = [ "const-fn" ] }
+cortex-m-rt = "0.6.12"
+embedded-hal = "0.2.3"
+nrf52840-hal = { version = "0.10.0", features = ["rt"] }
+rtt-target = { version = "0.2.0", features = ["cortex-m"] }
+panic-rtt-target = { version = "0.1.0", features = ["cortex-m"] }
+nb = "1.0.0"
+cortex-m-rtic = "0.5"
+nmea0183 = "0.2.3"

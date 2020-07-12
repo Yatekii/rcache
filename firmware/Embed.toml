@@ -1,0 +1,32 @@
+
+[default.flashing]
+# Whether or not the target should be flashed.
+enabled = true
+
+[default.general]
+# The chip name of the chip to be debugged.
+chip = "nrf52840_xxaa"
+# A list of chip descriptions to be loaded during runtime.
+chip_descriptions = []
+# The default log level to be used.
+log_level = "Warn"
+
+[default.rtt]
+# Whether or not an RTTUI should be opened after flashing.
+# This is exclusive and cannot be used with GDB at the moment.
+enabled = true
+# A list of channel associations to be displayed. If left empty, all channels are displayed.
+channels = [
+    # { up = 0, down = 0, name = "name" }
+]
+# The duration in ms for which the logger should retry to attach to RTT.
+timeout = 3000
+# Whether timestamps in the RTTUI are enabled
+show_timestamps = true
+
+[default.gdb]
+# Whether or not a GDB server should be opened after flashing.
+# This is exclusive and cannot be used with RTT at the moment.
+enabled = false
+# The connection string in host:port format wher the GDB server will open a socket.
+# gdb_connection_string
